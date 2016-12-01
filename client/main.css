@@ -1,0 +1,9 @@
+body {
+  touch-action: manipulation;
+}
+
+div#zone {
+  background-color: #00aaaa;
+  width: 100rem;
+  height: 10rem;
+}
