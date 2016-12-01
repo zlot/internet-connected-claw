@@ -2,6 +2,7 @@ import { Meteor } from 'meteor/meteor';
 const five = require('johnny-five')
 
 let s6, s9, s10, s11
+const STEP = 10;
 
 Meteor.startup(() => {
   let board = new five.Board({
@@ -31,10 +32,10 @@ Meteor.startup(() => {
       startAt: 90
     })
     s9.stepLeft = () => {
-      s9.to(s9.value-10)
+      s9.to(s9.value-STEP)
     }
     s9.stepRight = () => {
-      s9.to(s9.value+10)
+      s9.to(s9.value+STEP)
     }
 
     s10 = new five.Servo({
@@ -42,21 +43,21 @@ Meteor.startup(() => {
       startAt: 90
     })
     s10.stepLeft = function() {
-      this.to(this.value-10)
+      this.to(this.value-STEP)
     }
     s10.stepRight = function() {
-      this.to(this.value+10)
+      this.to(this.value+STEP)
     }
 
     s11 = new five.Servo({
       pin: 11,
       startAt: 90
     })
-    s11.stepLeft = function(step) {
-      this.to(this.value-step)
+    s11.stepLeft = function() {
+      this.to(this.value-STEP)
     }
-    s11.stepRight = function(step) {
-      this.to(this.value+step)
+    s11.stepRight = function() {
+      this.to(this.value+STEP)
     }
   })
 
@@ -64,10 +65,10 @@ Meteor.startup(() => {
 })
 
 Meteor.methods({
-  's11StepLeft': function(step=10) {
-    s11.stepLeft(step)
+  's11StepLeft': function() {
+    s11.stepLeft()
   },
-  's11StepRight': function(step=10) {
-    s11.stepRight(step)
+  's11StepRight': function() {
+    s11.stepRight()
   }
 })
