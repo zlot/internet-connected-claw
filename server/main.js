@@ -63,7 +63,24 @@ Meteor.startup(() => {
 })
 
 Meteor.methods({
-
+  's6StepLeft'() {
+    s6.stepLeft()
+  },
+  's6StepRight'() {
+    s6.stepRight()
+  },
+  's9StepLeft'() {
+    s9.stepLeft()
+  },
+  's9StepRight'() {
+    s9.stepRight()
+  },
+  's10StepLeft'() {
+    s10.stepLeft()
+  },
+  's10StepRight'() {
+    s10.stepRight()
+  },
   's11StepLeft'() {
     s11.stepLeft()
   },
