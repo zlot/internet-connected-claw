@@ -60,15 +60,14 @@ Meteor.startup(() => {
       this.to(this.value+STEP)
     }
   })
-
-
 })
 
 Meteor.methods({
-  's11StepLeft': function() {
+
+  's11StepLeft'() {
     s11.stepLeft()
   },
-  's11StepRight': function() {
+  's11StepRight'() {
     s11.stepRight()
   }
 })

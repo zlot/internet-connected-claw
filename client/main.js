@@ -11,10 +11,6 @@ let callStep = function(funcName) {
   });
 }
 
-Meteor.startup(function() {
-})
-
-
 Template.body.events({
   'click #left'(e, instance) {
     Meteor.call('s11StepLeft', function (err, result) {
