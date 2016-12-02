@@ -54,10 +54,10 @@ Meteor.startup(() => {
       startAt: 90
     })
     s11.stepLeft = function() {
-      this.to(this.value-STEP)
+      this.to(this.value-STEP-2)
     }
     s11.stepRight = function() {
-      this.to(this.value+STEP)
+      this.to(this.value+STEP-2)
     }
   })
 })
