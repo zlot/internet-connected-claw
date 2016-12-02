@@ -2,6 +2,7 @@ import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 import _ from 'lodash';
 import './main.html';
+import FastClick from './lib/fastclick.js'
 
 let callStep = function(funcName) {
   Meteor.call(funcName, function (err, result) {
@@ -10,6 +11,10 @@ let callStep = function(funcName) {
     }
   });
 }
+
+Meteor.startup(function() {
+  FastClick.attach(document.body);
+});
 
 Template.body.events({
   'click #js-button1'(e, instance) {
