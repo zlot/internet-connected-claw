@@ -7,5 +7,7 @@ Created in a day, displayed at General Assembly Sydney's Hour of Code event,
 
 Front-end styling by [Morgan Carter](http://morgancarter.com.au/) (twitter handle @morgoe876).
 
+Easiest way to get this up on the net for people to play with in the same room is to use a reverse-tunneling service like [Pagekite](https://pagekite.net/).
+
 ![The Claw](http://i.imgur.com/NJv6t5q.jpg)
 ![Web Interface](http://i.imgur.com/xRtaUGM.png)
