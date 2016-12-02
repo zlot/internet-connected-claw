@@ -12,18 +12,36 @@ let callStep = function(funcName) {
 }
 
 Template.body.events({
-  'click #left'(e, instance) {
-    Meteor.call('s11StepLeft', function (err, result) {
-      if(err) {
-        console.error(err);
-      }
-    });
+  'click #js-button1'(e, instance) {
+    moveClaw('s6StepLeft');
   },
-  'click #right'(e, instance) {
-    Meteor.call('s11StepRight', function (err, result) {
-      if(err) {
-        console.error(err);
-      }
-    });
+  'click #js-button2'(e, instance) {
+    moveClaw('s6StepRight');
+  },
+  'click #js-button3'(e, instance) {
+    moveClaw('s9StepLeft');
+  },
+  'click #js-button4'(e, instance) {
+    moveClaw('s9StepRight');
+  },
+  'click #js-button5'(e, instance) {
+    moveClaw('s10StepLeft');
+  },
+  'click #js-button6'(e, instance) {
+    moveClaw('s10StepRight');
+  },
+  'click #js-button7'(e, instance) {
+    moveClaw('s11StepRight');
+  },
+  'click #js-button8'(e, instance) {
+    moveClaw('s11StepLeft');
   },
 });
+
+function moveClaw(funcName) {
+  Meteor.call(funcName, function (err, result) {
+    if(err) {
+      console.error(err);
+    }
+  });
+}
