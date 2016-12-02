@@ -10,21 +10,29 @@ Meteor.startup(() => {
   })
 
   board.on('ready', function() {
+    const S6_LIMIT = 10
+    let s6Counter = 0
     s6 = new five.Servo({
       pin: 6,
       type: 'continuous'
     })
     s6.stepLeft = () => {
+      if(s6Counter <= -S6_LIMIT-7) // because it moves left slower than right!
+        return
       s6.cw()
       this.wait(40, () => {
         s6.stop()
       })
+      s6Counter--
     }
     s6.stepRight = () => {
+      if(s6Counter === S6_LIMIT-1)
+        return
       s6.ccw()
       this.wait(40, () => {
         s6.stop()
       })
+      s6Counter++
     }
 
     s9 = new five.Servo({
