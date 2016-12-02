@@ -32,10 +32,10 @@ Meteor.startup(() => {
       startAt: 90
     })
     s9.stepLeft = () => {
-      s9.to(s9.value-STEP)
+      s9.to(s9.value-STEP/2)
     }
     s9.stepRight = () => {
-      s9.to(s9.value+STEP)
+      s9.to(s9.value+STEP/2)
     }
 
     s10 = new five.Servo({
