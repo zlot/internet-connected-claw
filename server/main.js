@@ -15,13 +15,13 @@ Meteor.startup(() => {
       type: 'continuous'
     })
     s6.stepLeft = () => {
-      s6.ccw()
+      s6.cw()
       this.wait(40, () => {
         s6.stop()
       })
     }
     s6.stepRight = () => {
-      s6.cw()
+      s6.ccw()
       this.wait(40, () => {
         s6.stop()
       })
