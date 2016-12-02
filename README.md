@@ -7,4 +7,4 @@ Created in a day, displayed at General Assembly Sydney's Hour of Code event,
 
 Front-end styling by [Morgan Carter](http://morgancarter.com.au/) (twitter handle @morgoe876).
 
-[The Claw](http://i.imgur.com/NJv6t5q.jpg)
+![The Claw](http://i.imgur.com/NJv6t5q.jpg)
